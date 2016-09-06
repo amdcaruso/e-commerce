@@ -1,0 +1,114 @@
+/*Css Reset - selects all the elements*/
+*{
+   font-family: "Segoe UI","Dejavu Sans","Helvetica Neue","Helvetica","Arial","sans-serif";
+   
+  color: rgb(50,50,50);
+}
+/*Characteristics of the barcode*/
+.barcode{
+  margin-top:5px;
+  font-family: "Helvetica";
+  display: inline-block;
+  letter-spacing: -5pt;
+  font-size:24pt;
+  color:black;
+}
+/*Outside div which comprises the two halves of ticket */
+#ticket{
+  width:650px;
+  height:140px;
+  position:relative;
+}
+/*First half of the ticket - left side */
+.ticketFirstHalf {
+  background-color: #DDDDDE;
+  border-radius: 10px 0 0 10px;
+  padding: 15px;
+  border-right-width: 2px;
+  border-right-style: dashed;
+  border-right-color: white;
+  width: calc(100% - 240px);
+  height:110px;
+  display:inline-block;
+}
+/*Second half of the ticket - right side */
+.ticketSecondHalf {
+  background-color: #DDDDDE;
+  border-radius: 0 10px 10px 0;
+  text-align: center;
+  padding: 15px;
+  padding-top:25px;
+  width: 178px;
+  height:100px;
+  float:right;
+}
+/*Color of the right side description of the ticket*/
+.description{
+  color: gray;
+}
+/*Color of the right side content of the ticket*/
+.content {
+  color: #77B13A;
+  font-weight: bold;
+}
+/*Paragraphs have their margin set to 0, no margin*/
+p{
+  margin:0px;
+}
+/*The first text on the left side of the ticket*/
+.first {
+  font-size: 90%;
+  font-weight: 600;
+  margin: 0;
+}
+/*The second text on the left side of the ticket*/
+.second {
+  font-size: 15px;
+  font-weight: bold;
+  margin: 0;
+}
+/*The third text on the left side of the ticket*/
+.third {
+  font-size: 13px;
+  color: gray;
+  margin: 0;
+}
+/*It spins the circle*/
+.circle{
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+    background-color: white;
+	left:calc(100% - 215px);
+}
+/*Positions thes  semicircle on top*/
+.topCircle {
+	top:-6px;
+	position: absolute;
+}
+/*Positions the semicircule at the bottom*/
+.bottomCircle { 
+	bottom: -6px; 
+	position: absolute;
+}
+
+/*Responsive*/
+@media only screen and (max-width: 650px) {
+  #ticket{
+    width:100%;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  #ticket{
+    width:460px;
+  }
+  .ticketFirsthalf{
+	 width:100%;
+     display: block;
+	}
+  .ticketSecondHalf{
+	 width:50%;
+	 float:left;
+}
